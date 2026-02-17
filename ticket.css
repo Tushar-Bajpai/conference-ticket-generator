@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inconsolata', monospace;
+}
+
+body{ 
+    
+    min-height: 100vh;      /* Ensures body takes up full screen height */
+    min-height: 800px;
+ color:white;
+ margin: 0;
+  background-image: 
+  url("assets/images/pattern-squiggly-line-bottom-desktop.svg"),
+  url("assets/images/pattern-squiggly-line-top.svg"),
+  url("assets/images/pattern-circles.svg"),
+  url("assets/images/pattern-lines.svg"),
+  url("assets/images/background-desktop.png");
+ background-repeat: no-repeat;
+ background-position: left bottom, right top, center, right bottom, center;
+background-size: 80% auto, auto, auto, auto, cover;
+padding-top: 20px;
+
+
+}
+
+.header-center {
+    display: flex;
+    flex-direction: column; /* Stacks Logo above Text */
+    align-items: center;    /* Centers them horizontally */
+    justify-content: center;
+    
+    text-align: center;     /* Ensures multi-line text is also centered */
+    margin-top: 1rem;       /* Adds space from the very top of the browser */
+      
+}
+
+.logo-conf {
+    width: 200px;           /* Control the logo size */
+    margin-bottom: 1rem;    /* Space between Logo and H1 */
+}
+
+h1 {
+    color: white;           /* Assuming a dark background */
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0;              /* Removes default browser margins for cleaner spacing */
+}
+
+header p {
+    margin-top: 3rem;
+}
+
+.ticket-container {
+   
+    position: relative; 
+    width: 100%;             
+    max-width: 600px;        
+    aspect-ratio: 600/300;   
+    
+    /* THE FIX: This centers the div horizontally */
+    margin: 2rem auto;       /* 'auto' calculates equal left/right margins */
+
+    background-image: url('assets/images/pattern-ticket.svg'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    /* for ticket content */
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    box-sizing: border-box;
+
+}  
+
+.ticket-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 75%;
+   
+    
+}
+
+.ticket-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.date-location {
+    margin: 1rem 0;
+}
+
+.ticket-user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+   
+}
+
+.ticket-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.ticket-number p {
+    writing-mode: vertical-rl; /* Makes text vertical */
+    transform: rotate(180deg); /* Fixes direction if needed */
+    font-size: 1.5rem;
+    color: #888;
+}
+
+.user-details{
+    display: flex;
+    flex-direction: column;
+    
+    /* CHANGE THIS LINE */
+    /* Old: justify-content: space-between; (This was spreading them apart) */
+    justify-content: center; /* New: This groups them together in the middle */
+    
+    /* Use gap to control the specific space between Name and Handle */
+    gap: 4px; 
+    
+  
+    
+}
+
+
+.user-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 10%;
+    background-color: #ccc; 
+    object-fit: cover;
+}   
+
+.user-name {
+    font-size: 1.5rem;
+    font-weight: 700;     /* Make it bold */
+    color: white;
+    line-height: 1;       /* Prevents extra invisible space above/below text */
+    margin: 0;
+    
+}
+
+.github-handle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #888;
+   
+}
+
+.github-handle img {
+    width: 20px;          /* Size the icon appropriately */
+    height: 20px;
+}
+
+.github-handle p {
+    color: #ccc;          /* Lighter text color */
+    font-size: 1rem;
+    margin: 0;            /* Reset margins */
+}

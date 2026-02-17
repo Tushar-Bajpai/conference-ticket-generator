@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+*{
+    box-sizing: border-box;
+     margin: 0; 
+     padding: 0; 
+     font-family: 'Inconsolata', monospace;
+}
+
+body{
+ display: flex;
+ flex-direction: column; /* Stacks children vertically */
+ gap: 0.5rem;             /* Adds space between children */
+    justify-content: center; /* Centers horizontally (left/right) */
+    align-items: center;     /* Centers vertically (top/bottom) */
+    min-height: 100vh;       /* Ensures body takes up full screen height */
+    margin: 0;
+ color:white;
+
+  /* background-image: 
+  url("assets/images/pattern-squiggly-line-bottom-desktop.svg"),
+  url("assets/images/pattern-squiggly-line-top.svg"),
+  url("assets/images/pattern-circle.svg"),
+  url("assets/images/pattern-lines.svg"),
+  url("assets/images/background-desktop.png");
+ background-repeat: no-repeat;
+ background-position: left bottom, right top, center, right bottom, center;
+background-size: 80% 70%, auto, auto, auto, cover; */
+/* css shorthand for background */
+background:
+url("assets/images/pattern-squiggly-line-bottom-desktop.svg") left bottom / 80% 70% no-repeat,
+  url("assets/images/pattern-squiggly-line-top.svg") right top no-repeat,
+  url("assets/images/pattern-circle.svg") 74% 68% no-repeat,
+  url("assets/images/pattern-lines.svg") right bottom no-repeat,
+  url("assets/images/background-desktop.png") center / cover no-repeat;
+}
+
+.logo-conf{
+    width: 200px;
+    margin-top: 2rem;
+}
+
+h1{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    
+}   
+
+.subheading{
+    font-size: 1.25rem;
+    
+    color: #e0e0e0;
+    
+}
+
+h1.part-2{
+    color: #ff6f61;
+    margin-top: -1rem;
+    
+}
+
+/* 1. Position the Container (Centers it on the page) */
+.form-container {
+  width: 100%;
+  max-width: 500px;  /* Prevents it from getting too wide */
+  margin: 0 auto;    /* Centers horizontally */
+  padding: 2rem;     /* Adds breathing room inside */
+}
+
+/* 2. Arrange Form Elements in a Column */
+form {
+  display: flex;           /* Enables Flexbox */
+  flex-direction: column;  /* Stacks items vertically */
+  gap: 1rem;             /* Adds space between labels, inputs, and buttons */
+}
+
+/* 3. Style the Upload Area (The inner div) */
+.upload-area {
+  display: flex;
+  flex-direction: column; /* Stacks the icon and text */
+  align-items: center;    /* Centers them horizontally */
+  justify-content: center;
+  
+  /* Visual styling for the drop zone */
+  border: 2px dashed #888; 
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  outline: none;
+}
+
+.avatar-img-button {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+
+}
+
+.remove-img, .change-img {
+    display: none; /* Hidden by default */
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: hsla(5, 79%, 64%, 0.8);
+    color: hsl(248, 70%, 10%);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+
+   
+
+.upload-area img {
+    width: 50px;       /* Keep icon small */
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);  /* Icon background */
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.upload-area img.preview-active {
+    width: 100px;      /* Make photo bigger */
+    height: 100px;     /* Force square */
+    object-fit: cover; /* Crop neatly */
+    border-radius: 12px;
+    padding: 0;        /* Remove icon padding */
+    background: transparent;
+}
+
+.upload-area:hover {
+  background-color: transparent;
+  border-color: #55f;
+}
+
+/* 4. Make Inputs Fill the Width */
+input[type="text"],
+input[type="email"] {
+  padding: 0.8rem;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;           /* Ensures they stretch to fill the form */
+  box-sizing: border-box; /* Includes padding in the width calculation */
+  background-color: rgba(255, 255, 255, 0.05);
+  outline: none;
+}
+
+.submit-btn {
+  padding: 1rem;
+  background-color:hsl(7, 88%, 67%);
+  color: hsl(248, 70%, 10%);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+
+
+.hint {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    
+  
+}
+
