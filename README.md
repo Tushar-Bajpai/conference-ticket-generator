@@ -108,4 +108,3 @@ There are multiple places you can share your solution:
 
 
 
-**Have fun building!** 🚀
