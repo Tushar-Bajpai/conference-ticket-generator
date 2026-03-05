@@ -16,7 +16,7 @@ Your challenge is to build out this conference ticket generator and get it looki
 
 You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
-Your users should be able to: 
+Your users should be able to:
 
 - Complete the form with their details
 - Receive form validation messages if:
